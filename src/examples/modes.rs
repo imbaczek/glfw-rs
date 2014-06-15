@@ -31,8 +31,9 @@ fn main() {
         });
     });
 
-    println!("Available monitors\n\
-              ------------------");
+    println!("{}\n{}",
+	     "Available monitors",
+	     "------------------");
     glfw.with_connected_monitors(|monitors| {
         for monitor in monitors.iter() {
             println!("{}:", monitor.get_name());
